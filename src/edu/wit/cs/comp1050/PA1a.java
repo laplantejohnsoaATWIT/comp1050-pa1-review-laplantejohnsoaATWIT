@@ -1,11 +1,21 @@
 package edu.wit.cs.comp1050;
 
-// TODO: document this class
+/**
+ * 
+ * @author laplantejohnsoa
+ *
+ */
 public class PA1a {
 
-	// TODO: document this method
+	/**
+	 * Hello World!
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		// TODO: write your code here
+		
+		System.out.println("Hello World!");
+		
 	}
 
 }

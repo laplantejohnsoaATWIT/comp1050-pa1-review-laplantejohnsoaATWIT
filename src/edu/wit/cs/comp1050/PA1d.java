@@ -1,6 +1,12 @@
 package edu.wit.cs.comp1050;
 
-//TODO: document this class
+import java.util.Scanner;
+
+/**
+ * 
+ * @author laplantejohnsoa
+ *
+ */
 public class PA1d {
 	
 	/**
@@ -15,12 +21,35 @@ public class PA1d {
 	 * @return cost to ship
 	 */
 	public static double shippingCost(double weight) {
-		return 0.0; // TODO: replace with your method implementation
+		if (weight > 0 && weight <= 1) {
+			return 3.5;
+		} else if (weight > 1 && weight <= 3) {
+			return 5.5;
+		} else if (weight > 3 && weight <= 10) {
+			return 8.5;
+		} else if (weight > 10 && weight <= 20) {
+			return 10.5;
+		} else {
+			return -1;
+		}
 	}
 
-	// TODO: document this method
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		// TODO: write your code here
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter package weight: ");
+		double w = input.nextDouble();
+		double cost = shippingCost(w);
+		if (cost == -1) {
+			System.out.println(ERR_MSG);
+		} else {
+			System.out.printf("It will cost $%.2f to ship this package.%n", cost);
+		}
+		
+		
 	}
 
 }
